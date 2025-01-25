@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8g8d2xr187w7"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_t2bna"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t2bna")
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 72.0
+offset_right = 763.0
+offset_bottom = 182.0
+theme_override_font_sizes/font_size = 80
+text = "Quiet Sea"
+
+[node name="Jugar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 264.0
+offset_right = 645.0
+offset_bottom = 341.0
+theme_override_font_sizes/font_size = 50
+text = "Jugar"
+
+[node name="Controles" type="Button" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 376.0
+offset_right = 704.0
+offset_bottom = 453.0
+theme_override_font_sizes/font_size = 50
+text = "Controles"
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 488.0
+offset_right = 640.0
+offset_bottom = 565.0
+theme_override_font_sizes/font_size = 50
+text = "Salir"
+
+[node name="Atras" type="Button" parent="."]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 344.0
+offset_right = 384.0
+offset_bottom = 421.0
+theme_override_font_sizes/font_size = 50
+text = "Atrás"
+
+[node name="TextoControles" type="Label" parent="."]
+layout_mode = 0
+offset_left = 616.0
+offset_top = 240.0
+offset_right = 992.0
+offset_bottom = 516.0
+theme_override_font_sizes/font_size = 20
+text = "Controlas a un submarno cuyo objetivo es escapar de las profundidades marinas y alcanzar la superficie.
+Maneja el oxígeno recogiendo burbujas y evita ser golpeado por rocas y criaturas marinas.
+
+Muévete con las flechas del teclado."
+autowrap_mode = 2
+justification_flags = 35
+
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Controles" to="." method="_on_controles_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]
+[connection signal="pressed" from="Atras" to="." method="_on_atras_pressed"]

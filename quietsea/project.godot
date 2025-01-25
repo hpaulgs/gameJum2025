@@ -15,3 +15,7 @@ run/main_scene="res://escenas/submarino.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 "<<<<<<<HEAD[autoload]Controlador"="*res://scripts/controlador.gd"
+
+[autoload]
+
+Controlador="*res://scripts/controlador.gd"
