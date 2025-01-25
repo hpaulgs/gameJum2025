@@ -5,6 +5,9 @@ var velocidad_escenario = 50
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Controlador.oxigeno = 100;
+	$CanvasLayer/Sprite2D/AnimationPlayer.play("lleno")
+	Controlador.bombona = $CanvasLayer/Sprite2D/AnimationPlayer
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -14,7 +17,7 @@ func _process(delta: float) -> void:
 	$Tentaculo2.position.y -= velocidad_escenario * delta
 	$Tentaculo3.position.y -= velocidad_escenario * delta
 	$Tentaculo4.position.y -= velocidad_escenario * delta
-	Controlador.actualizar_medidor_oxigeno(delta * -2)
+	Controlador.actualizar_medidor_oxigeno(delta * -1.5)
 
 
 func _on_victoria_body_entered(body: Node2D) -> void:

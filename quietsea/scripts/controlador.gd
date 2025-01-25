@@ -1,7 +1,7 @@
 extends Node
 
 var oxigeno = 100
-
+var bombona = null
 var current_scene = null
 
 # Called when the node enters the scene tree for the first time.
@@ -49,3 +49,16 @@ func actualizar_medidor_oxigeno(o2: float):
 	elif oxigeno <= 0:
 		oxigeno = 100
 		Controlador.goto_scene("res://escenas/derrota.tscn")
+
+	if oxigeno < 10:
+		bombona.play("vacio")
+	elif oxigeno < 30:
+		bombona.play("1 barra")
+	elif oxigeno < 50:
+		bombona.play("2 barras")
+	elif oxigeno < 70:
+		bombona.play("3 barras")
+	elif oxigeno < 90:
+		bombona.play("4 barras")
+	else:
+		bombona.play("lleno")
