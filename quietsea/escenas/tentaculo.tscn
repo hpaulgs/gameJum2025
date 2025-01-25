@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://07rntfcn2toi"]
+
+[ext_resource type="Script" path="res://scripts/tentaculo.gd" id="1_g3egp"]
+[ext_resource type="Texture2D" uid="uid://bv6xornrfdms4" path="res://graficos/TENTACULOS SPRITES.png" id="2_r8j3s"]
+
+[sub_resource type="Animation" id="Animation_tek0q"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_j5itn"]
+resource_name = "movimiento"
+length = 0.7
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 9, 4, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3uv7j"]
+_data = {
+"RESET": SubResource("Animation_tek0q"),
+"movimiento": SubResource("Animation_j5itn")
+}
+
+[node name="Tentaculo" type="Area2D"]
+script = ExtResource("1_g3egp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-40, 248, 128, 248, 48, -32, 120, -88, 88, -232, -56, -240, -112, -120, -128, 72)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_r8j3s")
+hframes = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_3uv7j")
+}
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
