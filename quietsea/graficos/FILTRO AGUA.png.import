@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://78a52r73q6to"
-path="res://.godot/imported/TENTACULOS.png-1cb9353cd788ea0546cf5cbe5ec265e7.ctex"
+uid="uid://c8srkbt8u82yk"
+path="res://.godot/imported/FILTRO AGUA.png-2854344823165d5115a8c6561027d5cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graficos/TENTACULOS.png"
-dest_files=["res://.godot/imported/TENTACULOS.png-1cb9353cd788ea0546cf5cbe5ec265e7.ctex"]
+source_file="res://graficos/FILTRO AGUA.png"
+dest_files=["res://.godot/imported/FILTRO AGUA.png-2854344823165d5115a8c6561027d5cd.ctex"]
 
 [params]
 

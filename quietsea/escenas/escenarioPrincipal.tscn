@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://d2hqiwwrsigkg"]
+
+[ext_resource type="Script" path="res://scripts/escenario_principal.gd" id="1_2gbau"]
+[ext_resource type="Texture2D" uid="uid://wg8ikrisgyma" path="res://graficos/FONDO AGUA.png" id="1_siqg7"]
+[ext_resource type="PackedScene" uid="uid://cb1qj3md6vi6v" path="res://escenas/submarino.tscn" id="2_wg34u"]
+[ext_resource type="Texture2D" uid="uid://c8srkbt8u82yk" path="res://graficos/FILTRO AGUA.png" id="4_6txsb"]
+[ext_resource type="Texture2D" uid="uid://cle1daxe8hac6" path="res://graficos/ROCAS.png" id="5_ckm6x"]
+[ext_resource type="Texture2D" uid="uid://78a52r73q6to" path="res://graficos/TENTACULOS.png" id="6_jyblc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ijg70"]
+size = Vector2(68.5, 5147.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y0pd5"]
+size = Vector2(64, 5148)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2vor5"]
+size = Vector2(1289, 74)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_prqia"]
+size = Vector2(1289, 201)
+
+[node name="escenarioPrincipal" type="Node2D"]
+script = ExtResource("1_2gbau")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, -1926)
+texture = ExtResource("1_siqg7")
+
+[node name="Submarino" parent="." instance=ExtResource("2_wg34u")]
+position = Vector2(561, 314)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(-34.75, -1925.88)
+shape = SubResource("RectangleShape2D_ijg70")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(1185, -1926)
+shape = SubResource("RectangleShape2D_y0pd5")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(573.5, 688)
+shape = SubResource("RectangleShape2D_2vor5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 323)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Camera2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Camera2D/RigidBody2D"]
+position = Vector2(-2, 504)
+shape = SubResource("RectangleShape2D_prqia")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(582, -1929)
+texture = ExtResource("4_6txsb")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(578, -1925)
+texture = ExtResource("5_ckm6x")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(270, 395)
+texture = ExtResource("6_jyblc")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(841, 400)
+texture = ExtResource("6_jyblc")
