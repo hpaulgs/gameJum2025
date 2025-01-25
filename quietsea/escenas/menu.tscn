@@ -14,9 +14,9 @@ script = ExtResource("1_t2bna")
 [node name="Titulo" type="Label" parent="."]
 layout_mode = 0
 offset_left = 392.0
-offset_top = 72.0
+offset_top = 56.0
 offset_right = 763.0
-offset_bottom = 182.0
+offset_bottom = 166.0
 theme_override_font_sizes/font_size = 80
 text = "Quiet Sea"
 

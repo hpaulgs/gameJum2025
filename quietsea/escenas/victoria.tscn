@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://besi4c4i8k627"]
+
+[ext_resource type="Script" path="res://scripts/victoria.gd" id="1_gwuqu"]
+
+[node name="Victoria" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gwuqu")
+
+[node name="Victoria" type="Label" parent="."]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 48.0
+offset_right = 747.0
+offset_bottom = 158.0
+theme_override_font_sizes/font_size = 80
+text = "¡Victoria!"
+
+[node name="Creditos" type="Label" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 192.0
+offset_right = 694.0
+offset_bottom = 468.0
+theme_override_font_sizes/font_size = 20
+text = "Programadores
+
+Pablo Guardia
+Henry Paul García
+Natalia Ayelen Serantes
+
+Artista
+
+Laura Miras (LilithKB)
+"
+horizontal_alignment = 1
+
+[node name="Inicio" type="Button" parent="."]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 520.0
+offset_right = 512.0
+offset_bottom = 597.0
+theme_override_font_sizes/font_size = 50
+text = "Volver al menú"
+
+[node name="Reintentar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 688.0
+offset_top = 520.0
+offset_right = 1028.0
+offset_bottom = 597.0
+theme_override_font_sizes/font_size = 50
+text = "Volver a jugar"
+
+[connection signal="pressed" from="Inicio" to="." method="_on_inicio_pressed"]
+[connection signal="pressed" from="Reintentar" to="." method="_on_reintentar_pressed"]
