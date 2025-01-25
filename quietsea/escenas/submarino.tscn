@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb1qj3md6vi6v"]
+
+[ext_resource type="Script" path="res://scripts/submarino.gd" id="1_hbhwx"]
+[ext_resource type="Texture2D" uid="uid://cdb588b3itf3v" path="res://graficos/SUBMARINO.png" id="2_hll86"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5d561"]
+size = Vector2(116, 53)
+
+[node name="Submarino" type="CharacterBody2D"]
+script = ExtResource("1_hbhwx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 7.5)
+shape = SubResource("RectangleShape2D_5d561")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_hll86")
