@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ck0vcq8fajt4j"]
+[gd_scene load_steps=4 format=3 uid="uid://be661em762h08"]
 
 [ext_resource type="Script" path="res://scripts/tiburon.gd" id="1_rabig"]
 [ext_resource type="Texture2D" uid="uid://b8apby3huu6om" path="res://graficos/PECES.png" id="1_vevbo"]

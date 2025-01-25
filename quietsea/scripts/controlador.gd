@@ -47,4 +47,5 @@ func actualizar_medidor_oxigeno(o2: float):
 	if oxigeno > 100:
 		oxigeno = 100
 	elif oxigeno <= 0:
-		pass
+		oxigeno = 100
+		Controlador.goto_scene("res://escenas/derrota.tscn")

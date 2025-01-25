@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://wg8ikrisgyma" path="res://graficos/FONDO AGUA.png" id="1_siqg7"]
 [ext_resource type="PackedScene" uid="uid://cb1qj3md6vi6v" path="res://escenas/submarino.tscn" id="2_wg34u"]
 [ext_resource type="Texture2D" uid="uid://c8srkbt8u82yk" path="res://graficos/FILTRO AGUA.png" id="4_6txsb"]
-[ext_resource type="PackedScene" uid="uid://cxpao2oc18x7y" path="res://escenas/pez_globo.tscn" id="4_rwxvg"]
+[ext_resource type="PackedScene" uid="uid://c6mbebs1okknx" path="res://escenas/pez_globo.tscn" id="4_rwxvg"]
 [ext_resource type="Texture2D" uid="uid://cle1daxe8hac6" path="res://graficos/ROCAS.png" id="5_ckm6x"]
 [ext_resource type="Texture2D" uid="uid://78a52r73q6to" path="res://graficos/TENTACULOS.png" id="6_jyblc"]
 
