@@ -8,6 +8,7 @@ var activado = false
 
 func _ready() -> void:
 	submarino = get_node("/root/escenarioPrincipal/Submarino")
+	$Sprite2D/AnimationPlayer.play("movimiento")
 	add_to_group("peces")
 	
 

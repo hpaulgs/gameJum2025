@@ -5,6 +5,7 @@ const danio = -30
 var SPEED = 0
 
 func _ready() -> void:
+	$Sprite2D/AnimationPlayer.play("movimiento")
 	add_to_group("peces")
 	
 
