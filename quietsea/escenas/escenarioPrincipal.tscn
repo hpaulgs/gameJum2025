@@ -1,12 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2hqiwwrsigkg"]
+[gd_scene load_steps=13 format=3 uid="uid://d2hqiwwrsigkg"]
 
 [ext_resource type="Script" path="res://scripts/escenario_principal.gd" id="1_2gbau"]
 [ext_resource type="Texture2D" uid="uid://wg8ikrisgyma" path="res://graficos/FONDO AGUA.png" id="1_siqg7"]
 [ext_resource type="PackedScene" uid="uid://cb1qj3md6vi6v" path="res://escenas/submarino.tscn" id="2_wg34u"]
 [ext_resource type="Texture2D" uid="uid://c8srkbt8u82yk" path="res://graficos/FILTRO AGUA.png" id="4_6txsb"]
-[ext_resource type="PackedScene" uid="uid://c6mbebs1okknx" path="res://escenas/pez_globo.tscn" id="4_rwxvg"]
+[ext_resource type="PackedScene" uid="uid://cxpao2oc18x7y" path="res://escenas/pez_globo.tscn" id="4_rwxvg"]
 [ext_resource type="Texture2D" uid="uid://cle1daxe8hac6" path="res://graficos/ROCAS.png" id="5_ckm6x"]
 [ext_resource type="Texture2D" uid="uid://78a52r73q6to" path="res://graficos/TENTACULOS.png" id="6_jyblc"]
+[ext_resource type="PackedScene" uid="uid://ck0vcq8fajt4j" path="res://escenas/tiburon.tscn" id="8_5n6uu"]
+[ext_resource type="PackedScene" uid="uid://yolsh3delpij" path="res://escenas/pez_espada.tscn" id="9_yf75a"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7ww0a"]
 a = Vector2(-131, -380)
@@ -26,7 +28,7 @@ position = Vector2(576, -1926)
 texture = ExtResource("1_siqg7")
 
 [node name="Submarino" parent="." instance=ExtResource("2_wg34u")]
-position = Vector2(561, 314)
+position = Vector2(530, 314)
 
 [node name="PezGlobo" parent="." instance=ExtResource("4_rwxvg")]
 position = Vector2(457, 148)
@@ -61,6 +63,9 @@ texture = ExtResource("5_ckm6x")
 position = Vector2(582, -1929)
 texture = ExtResource("4_6txsb")
 
+[node name="PezGlobo" parent="Sprite2D2" instance=ExtResource("4_rwxvg")]
+position = Vector2(0, -28)
+
 [node name="Sprite2D5" type="Sprite2D" parent="."]
 position = Vector2(270, 395)
 texture = ExtResource("6_jyblc")
@@ -80,3 +85,51 @@ shape = SubResource("RectangleShape2D_k0qmi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Victoria"]
 position = Vector2(574.75, -4586)
 shape = SubResource("RectangleShape2D_hopfu")
+
+[node name="Tiburon" parent="." instance=ExtResource("8_5n6uu")]
+position = Vector2(1198, -141)
+
+[node name="PezGlobo2" parent="." instance=ExtResource("4_rwxvg")]
+position = Vector2(358, -475)
+
+[node name="PezEspada" parent="." instance=ExtResource("9_yf75a")]
+position = Vector2(1195, -807)
+
+[node name="PezGlobo3" parent="." instance=ExtResource("4_rwxvg")]
+position = Vector2(237, -1286)
+
+[node name="Tiburon2" parent="." instance=ExtResource("8_5n6uu")]
+position = Vector2(1199, -1625)
+
+[node name="PezEspada2" parent="." instance=ExtResource("9_yf75a")]
+position = Vector2(1196, -2164)
+
+[node name="Tiburon3" parent="." instance=ExtResource("8_5n6uu")]
+position = Vector2(1187, -2778)
+
+[node name="PezGlobo4" parent="." instance=ExtResource("4_rwxvg")]
+position = Vector2(446, -2841)
+
+[node name="PezEspada3" parent="." instance=ExtResource("9_yf75a")]
+position = Vector2(1196, -3306)
+
+[node name="PezGlobo5" parent="." instance=ExtResource("4_rwxvg")]
+position = Vector2(443, -3405)
+
+[node name="Tiburon4" parent="." instance=ExtResource("8_5n6uu")]
+position = Vector2(1199, -3806)
+
+[node name="PezGlobo6" parent="." instance=ExtResource("4_rwxvg")]
+position = Vector2(488, -4166)
+
+[node name="Tiburon5" parent="." instance=ExtResource("8_5n6uu")]
+position = Vector2(1199, -4406)
+
+[node name="PezEspada4" parent="." instance=ExtResource("9_yf75a")]
+position = Vector2(1202, -3384)
+
+[node name="PezEspada5" parent="." instance=ExtResource("9_yf75a")]
+position = Vector2(1194, 106)
+
+[node name="PezGlobo7" parent="." instance=ExtResource("4_rwxvg")]
+position = Vector2(486, -2410)
