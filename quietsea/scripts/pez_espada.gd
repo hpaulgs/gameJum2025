@@ -5,6 +5,7 @@ var SPEED = -250.0
 var submarino: CharacterBody2D
 var distancia_activacion = 600.0
 var activado = false
+var posicion_izquierda = 0;
 
 func _ready() -> void:
 	submarino = get_node("/root/escenarioPrincipal/Submarino")
@@ -16,7 +17,11 @@ func _physics_process(delta: float) -> void:
 	var distancia = global_position.distance_to(submarino.global_position)
 	if distancia <= distancia_activacion:
 		activado = true
-		
+	
+	if position.x < posicion_izquierda:
+		SPEED = 250
+		$Sprite2D.flip_h = true
+	
 	if activado:
 		velocity.x = SPEED
 		move_and_slide()
