@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 	$Tentaculo2.position.y -= velocidad_escenario * delta
 	$Tentaculo3.position.y -= velocidad_escenario * delta
 	$Tentaculo4.position.y -= velocidad_escenario * delta
-	Controlador.actualizar_medidor_oxigeno(delta * -3)
+	Controlador.actualizar_medidor_oxigeno(delta * -2)
 
 
 func _on_victoria_body_entered(body: Node2D) -> void:

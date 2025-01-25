@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://d2hqiwwrsigkg"]
+[gd_scene load_steps=23 format=3 uid="uid://d2hqiwwrsigkg"]
 
 [ext_resource type="Script" path="res://scripts/escenario_principal.gd" id="1_2gbau"]
 [ext_resource type="Texture2D" uid="uid://wg8ikrisgyma" path="res://graficos/FONDO AGUA.png" id="1_siqg7"]
@@ -11,6 +11,14 @@
 [ext_resource type="PackedScene" uid="uid://yolsh3delpij" path="res://escenas/pez_espada.tscn" id="9_yf75a"]
 [ext_resource type="PackedScene" uid="uid://cdr76nbq0hpq3" path="res://escenas/burbuja.tscn" id="10_00l34"]
 [ext_resource type="AudioStream" uid="uid://tagrs8dxgwtb" path="res://musica/risk-136788.mp3" id="11_51gk6"]
+[ext_resource type="Texture2D" uid="uid://bxo0aeco382jy" path="res://graficos/ALGA FONDO.png" id="12_nkgvf"]
+[ext_resource type="Texture2D" uid="uid://bov0vk15j1831" path="res://graficos/CORAL 2.png" id="13_lj200"]
+[ext_resource type="Texture2D" uid="uid://i26wi4ftvuwi" path="res://graficos/ALGAS 2.png" id="14_76pkq"]
+[ext_resource type="Texture2D" uid="uid://ctsr6em7wllud" path="res://graficos/CORAL 4.png" id="15_jo7oj"]
+[ext_resource type="Texture2D" uid="uid://i2mcai37wars" path="res://graficos/CORAL 1.png" id="16_xsrlk"]
+[ext_resource type="Texture2D" uid="uid://be8046hjo1v2d" path="res://graficos/CORAL 3.png" id="17_t8gee"]
+[ext_resource type="Texture2D" uid="uid://cm61khmhwogvg" path="res://graficos/ALGAS 1.png" id="18_fi10y"]
+[ext_resource type="Texture2D" uid="uid://c32p71yiql40f" path="res://graficos/ALGAS 3.png" id="19_ngxtx"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7ww0a"]
 a = Vector2(-131, -380)
@@ -153,32 +161,17 @@ position = Vector2(-72, -332)
 [node name="Tiburon7" parent="." instance=ExtResource("8_5n6uu")]
 position = Vector2(-76, -1038)
 
-[node name="Area2D" parent="." instance=ExtResource("10_00l34")]
-position = Vector2(649, -294)
-
 [node name="Area2D2" parent="." instance=ExtResource("10_00l34")]
 position = Vector2(597, -744)
 
-[node name="Area2D3" parent="." instance=ExtResource("10_00l34")]
-position = Vector2(451, -1136)
-
 [node name="Area2D4" parent="." instance=ExtResource("10_00l34")]
-position = Vector2(298, -1628)
-
-[node name="Area2D5" parent="." instance=ExtResource("10_00l34")]
-position = Vector2(456, -2143)
+position = Vector2(355, -1495)
 
 [node name="Area2D6" parent="." instance=ExtResource("10_00l34")]
 position = Vector2(526, -2638)
 
-[node name="Area2D7" parent="." instance=ExtResource("10_00l34")]
-position = Vector2(507, -3128)
-
 [node name="Area2D8" parent="." instance=ExtResource("10_00l34")]
 position = Vector2(383, -3560)
-
-[node name="Area2D9" parent="." instance=ExtResource("10_00l34")]
-position = Vector2(412, -4008)
 
 [node name="Area2D10" parent="." instance=ExtResource("10_00l34")]
 position = Vector2(352, -4439)
@@ -188,6 +181,99 @@ stream = ExtResource("11_51gk6")
 volume_db = -15.0
 autoplay = true
 playback_type = 1
+
+[node name="Tiburon8" parent="." instance=ExtResource("8_5n6uu")]
+position = Vector2(-92, -1402)
+
+[node name="Tiburon9" parent="." instance=ExtResource("8_5n6uu")]
+position = Vector2(1238, -1939)
+
+[node name="PezEspada8" parent="." instance=ExtResource("9_yf75a")]
+position = Vector2(1244, -1243)
+
+[node name="PezEspada9" parent="." instance=ExtResource("9_yf75a")]
+position = Vector2(-90, -1780)
+
+[node name="PezGlobo8" parent="." instance=ExtResource("4_rwxvg")]
+position = Vector2(497, -1985)
+
+[node name="PezGlobo9" parent="." instance=ExtResource("4_rwxvg")]
+position = Vector2(802, -1047)
+
+[node name="Tiburon10" parent="." instance=ExtResource("8_5n6uu")]
+position = Vector2(-106, -2475)
+
+[node name="PezEspada10" parent="." instance=ExtResource("9_yf75a")]
+position = Vector2(-103, -2909)
+
+[node name="PezEspada11" parent="." instance=ExtResource("9_yf75a")]
+position = Vector2(-110, -3053)
+
+[node name="Tiburon11" parent="." instance=ExtResource("8_5n6uu")]
+position = Vector2(-107, -3609)
+
+[node name="PezEspada12" parent="." instance=ExtResource("9_yf75a")]
+position = Vector2(-118, -4020)
+
+[node name="PezGlobo10" parent="." instance=ExtResource("4_rwxvg")]
+position = Vector2(201, -4336)
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(581, 366)
+texture = ExtResource("12_nkgvf")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(65, -3196)
+rotation = 1.55259
+scale = Vector2(-1.64281, 2.17332)
+texture = ExtResource("13_lj200")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(1119, -1791)
+rotation = -1.56192
+scale = Vector2(2.34865, 1.07348)
+texture = ExtResource("14_76pkq")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(928, -3149)
+scale = Vector2(1.16, 1.44)
+texture = ExtResource("15_jo7oj")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(39, -3249)
+scale = Vector2(1.56, 1.28)
+texture = ExtResource("16_xsrlk")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(722, -3507)
+texture = ExtResource("17_t8gee")
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(127, -272)
+texture = ExtResource("18_fi10y")
+
+[node name="Sprite2D11" type="Sprite2D" parent="."]
+position = Vector2(914, -495)
+texture = ExtResource("19_ngxtx")
+
+[node name="Sprite2D12" type="Sprite2D" parent="."]
+position = Vector2(30, -1238)
+texture = ExtResource("14_76pkq")
+
+[node name="Sprite2D13" type="Sprite2D" parent="."]
+position = Vector2(266, -2168)
+texture = ExtResource("19_ngxtx")
+
+[node name="Sprite2D14" type="Sprite2D" parent="."]
+position = Vector2(362, -2626)
+texture = ExtResource("13_lj200")
+
+[node name="Sprite2D15" type="Sprite2D" parent="."]
+position = Vector2(89, -3993)
+texture = ExtResource("15_jo7oj")
+
+[node name="Area2D" parent="." instance=ExtResource("10_00l34")]
+position = Vector2(391, -2082)
 
 [connection signal="body_entered" from="Muerte" to="." method="_on_muerte_body_entered"]
 [connection signal="body_entered" from="Victoria" to="." method="_on_victoria_body_entered"]
