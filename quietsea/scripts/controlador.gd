@@ -41,3 +41,10 @@ func _deferred_goto_scene(path):
 
 	# Optionally, to make it compatible with the SceneTree.change_scene_to_file() API.
 	get_tree().current_scene = current_scene
+	
+func actualizar_medidor_oxigeno(o2: float):
+	oxigeno += o2
+	if oxigeno > 100:
+		oxigeno = 100
+	elif oxigeno <= 0:
+		pass
