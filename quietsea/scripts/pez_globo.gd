@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const danio = -30
+const danio = -20
 
 var SPEED = 0
 

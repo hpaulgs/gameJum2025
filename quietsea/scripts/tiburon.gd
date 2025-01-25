@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const danio = -30
+const danio = -20
 
 var SPEED = -100.0
 var submarino: CharacterBody2D

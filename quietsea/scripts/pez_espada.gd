@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const danio = -30
-var SPEED = -200.0
+const danio = -20
+var SPEED = -250.0
 var submarino: CharacterBody2D
 var distancia_activacion = 600.0
 var activado = false

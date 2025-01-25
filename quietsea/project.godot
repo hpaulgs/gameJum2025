@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="QuietSea"
-run/main_scene="res://escenas/submarino.tscn"
+run/main_scene="res://escenas/menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 "<<<<<<<HEAD[autoload]Controlador"="*res://scripts/controlador.gd"

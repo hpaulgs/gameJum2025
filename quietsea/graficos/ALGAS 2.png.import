@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1huovjuq2tke"
-path="res://.godot/imported/CORAL.png-1520ba55f506bfb12ebf33547acf478c.ctex"
+uid="uid://i26wi4ftvuwi"
+path="res://.godot/imported/ALGAS 2.png-8d706acf1acbfda0bf9a0bd429e17d5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://graficos/CORAL.png"
-dest_files=["res://.godot/imported/CORAL.png-1520ba55f506bfb12ebf33547acf478c.ctex"]
+source_file="res://graficos/ALGAS 2.png"
+dest_files=["res://.godot/imported/ALGAS 2.png-8d706acf1acbfda0bf9a0bd429e17d5c.ctex"]
 
 [params]
 
