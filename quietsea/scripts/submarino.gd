@@ -3,6 +3,8 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 
+func _ready() -> void:
+	add_to_group("jugador")
 
 func _process(delta: float) -> void:
 
