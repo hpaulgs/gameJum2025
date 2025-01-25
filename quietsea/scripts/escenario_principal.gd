@@ -10,5 +10,5 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	$Camera2D.position.y -= velocidad_escenario * delta
-	$RigidBody2D/CollisionShape2D3.position.y -= velocidad_escenario * delta
+	$Muerte.position.y -= velocidad_escenario * delta
 	#$Camera2D.position.y = position.y
