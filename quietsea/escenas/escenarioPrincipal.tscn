@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c6mbebs1okknx" path="res://escenas/pez_globo.tscn" id="4_rwxvg"]
 [ext_resource type="Texture2D" uid="uid://cle1daxe8hac6" path="res://graficos/ROCAS.png" id="5_ckm6x"]
 [ext_resource type="PackedScene" uid="uid://be661em762h08" path="res://escenas/tiburon.tscn" id="8_5n6uu"]
-[ext_resource type="PackedScene" path="res://escenas/tentaculo.tscn" id="9_uet53"]
+[ext_resource type="PackedScene" uid="uid://07rntfcn2toi" path="res://escenas/tentaculo.tscn" id="9_uet53"]
 [ext_resource type="PackedScene" uid="uid://yolsh3delpij" path="res://escenas/pez_espada.tscn" id="9_yf75a"]
 [ext_resource type="PackedScene" uid="uid://cdr76nbq0hpq3" path="res://escenas/burbuja.tscn" id="10_00l34"]
 [ext_resource type="AudioStream" uid="uid://tagrs8dxgwtb" path="res://musica/risk-136788.mp3" id="11_51gk6"]
