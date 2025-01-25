@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdr76nbq0hpq3"]
+[gd_scene load_steps=7 format=3 uid="uid://cdr76nbq0hpq3"]
 
 [ext_resource type="Script" path="res://scripts/burbuja.gd" id="1_ybs7q"]
 [ext_resource type="Texture2D" uid="uid://cfp72oabgf8gb" path="res://graficos/BURBUJA SPRITE.png" id="2_61rl5"]
-[ext_resource type="AudioStream" uid="uid://qbsn8sroxvxn" path="res://musica/pop-sound.wav" id="3_ytfm7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_j4bn7"]
 radius = 33.0151
@@ -60,8 +59,5 @@ hframes = 5
 libraries = {
 "": SubResource("AnimationLibrary_fo4a5")
 }
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_ytfm7")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

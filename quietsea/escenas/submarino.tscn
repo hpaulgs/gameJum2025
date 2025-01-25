@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cb1qj3md6vi6v"]
+[gd_scene load_steps=6 format=3 uid="uid://cb1qj3md6vi6v"]
 
 [ext_resource type="Script" path="res://scripts/submarino.gd" id="1_hbhwx"]
 [ext_resource type="Texture2D" uid="uid://cdb588b3itf3v" path="res://graficos/SUBMARINO.png" id="2_hll86"]
+[ext_resource type="AudioStream" uid="uid://vu1tkjab54g5" path="res://musica/slightmetallicthud.mp3" id="3_dxtrl"]
+[ext_resource type="AudioStream" uid="uid://qbsn8sroxvxn" path="res://musica/pop-sound.wav" id="4_23a7m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5d561"]
 size = Vector2(116, 53)
@@ -15,3 +17,9 @@ shape = SubResource("RectangleShape2D_5d561")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_hll86")
+
+[node name="Golpe" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_dxtrl")
+
+[node name="Burbuja" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_23a7m")

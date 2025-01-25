@@ -39,3 +39,9 @@ func _process(delta: float) -> void:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 
 	move_and_slide()
+
+func sonido(nombre: String) -> void:
+	if nombre == "golpe":
+		$Golpe.play()
+	elif nombre == "burbuja":
+		$Burbuja.play()
