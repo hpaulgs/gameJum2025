@@ -1,10 +1,47 @@
-[gd_scene load_steps=4 format=3 uid="uid://be661em762h08"]
+[gd_scene load_steps=7 format=3 uid="uid://be661em762h08"]
 
 [ext_resource type="Script" path="res://scripts/tiburon.gd" id="1_rabig"]
-[ext_resource type="Texture2D" uid="uid://b8apby3huu6om" path="res://graficos/PECES.png" id="1_vevbo"]
+[ext_resource type="Texture2D" uid="uid://fwbdmhnp5bjd" path="res://graficos/TIBURON SPRITE.png" id="2_wldob"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p0w2k"]
-size = Vector2(71, 33)
+size = Vector2(136, 72)
+
+[sub_resource type="Animation" id="Animation_3f5sx"]
+resource_name = "movimiento"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_rypym"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f2i2g"]
+_data = {
+"RESET": SubResource("Animation_rypym"),
+"movimiento": SubResource("Animation_3f5sx")
+}
 
 [node name="Tiburon" type="CharacterBody2D"]
 script = ExtResource("1_rabig")
@@ -13,9 +50,16 @@ script = ExtResource("1_rabig")
 position = Vector2(1.5, -6.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-5.5, 10.5)
 shape = SubResource("RectangleShape2D_p0w2k")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_vevbo")
+texture = ExtResource("2_wldob")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_f2i2g")
+}
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
