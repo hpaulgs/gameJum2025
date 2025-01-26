@@ -6,6 +6,7 @@ var camera_escenario: Camera2D  # Variable para almacenar la referencia a la cá
 
 func _ready() -> void:
 	add_to_group("jugador")
+	$Sprite2D/AnimationPlayer.play("movimiento")
 	# Obtener la referencia a la cámara del escenario principal
 	camera_escenario = get_node("/root/escenarioPrincipal/Camera2D")
 

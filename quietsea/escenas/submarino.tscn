@@ -1,22 +1,66 @@
-[gd_scene load_steps=6 format=3 uid="uid://cb1qj3md6vi6v"]
+[gd_scene load_steps=9 format=3 uid="uid://cb1qj3md6vi6v"]
 
 [ext_resource type="Script" path="res://scripts/submarino.gd" id="1_hbhwx"]
-[ext_resource type="Texture2D" uid="uid://cdb588b3itf3v" path="res://graficos/SUBMARINO.png" id="2_hll86"]
+[ext_resource type="Texture2D" uid="uid://b7li318t6cwm5" path="res://graficos/SUBMARINO SPRITE.png" id="2_gunw1"]
 [ext_resource type="AudioStream" uid="uid://vu1tkjab54g5" path="res://musica/slightmetallicthud.mp3" id="3_dxtrl"]
 [ext_resource type="AudioStream" uid="uid://qbsn8sroxvxn" path="res://musica/pop-sound.wav" id="4_23a7m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5d561"]
-size = Vector2(116, 53)
+size = Vector2(114, 56)
+
+[sub_resource type="Animation" id="Animation_fdoj4"]
+resource_name = "movimiento"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+
+[sub_resource type="Animation" id="Animation_6k0ru"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ypsi7"]
+_data = {
+"RESET": SubResource("Animation_6k0ru"),
+"movimiento": SubResource("Animation_fdoj4")
+}
 
 [node name="Submarino" type="CharacterBody2D"]
 script = ExtResource("1_hbhwx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 7.5)
+position = Vector2(-7, 4)
 shape = SubResource("RectangleShape2D_5d561")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_hll86")
+texture = ExtResource("2_gunw1")
+hframes = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D"]
+libraries = {
+"": SubResource("AnimationLibrary_ypsi7")
+}
 
 [node name="Golpe" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_dxtrl")
