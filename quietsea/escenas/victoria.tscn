@@ -1,9 +1,47 @@
-[gd_scene load_steps=5 format=3 uid="uid://besi4c4i8k627"]
+[gd_scene load_steps=8 format=3 uid="uid://besi4c4i8k627"]
 
 [ext_resource type="Script" path="res://scripts/victoria.gd" id="1_gwuqu"]
+[ext_resource type="Texture2D" uid="uid://dql54f8llouij" path="res://graficos/PANTALLA VICTORIA SPRITE.png" id="2_shouy"]
 [ext_resource type="AudioStream" uid="uid://cxsa237ko360p" path="res://musica/music-orchestral-victory-fanfare.wav" id="2_tf4dj"]
-[ext_resource type="VideoStream" path="res://graficos/PANTALLA-INICIO.ogv" id="3_7se1b"]
 [ext_resource type="Texture2D" uid="uid://c2q3tdllqum5k" path="res://graficos/rectangulonegro.png" id="3_u7bsa"]
+
+[sub_resource type="Animation" id="Animation_3ikpc"]
+resource_name = "movimiento"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_jvxgk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t1yxj"]
+_data = {
+"RESET": SubResource("Animation_jvxgk"),
+"movimiento": SubResource("Animation_3ikpc")
+}
 
 [node name="Victoria" type="Control"]
 layout_mode = 3
@@ -14,13 +52,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gwuqu")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 656.0
-stream = ExtResource("3_7se1b")
-autoplay = true
-loop = true
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+texture = ExtResource("2_shouy")
+offset = Vector2(576, 324)
+vframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D3"]
+libraries = {
+"": SubResource("AnimationLibrary_t1yxj")
+}
 
 [node name="Victoria" type="Label" parent="."]
 layout_mode = 0

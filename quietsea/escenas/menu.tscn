@@ -1,9 +1,47 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8g8d2xr187w7"]
+[gd_scene load_steps=8 format=3 uid="uid://b8g8d2xr187w7"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_t2bna"]
-[ext_resource type="VideoStream" path="res://graficos/PANTALLA-INICIO.ogv" id="2_13sgp"]
+[ext_resource type="Texture2D" uid="uid://jboi55lkqs6i" path="res://graficos/PANTALLA INICIO SPRITE.png" id="2_4kh0x"]
 [ext_resource type="Texture2D" uid="uid://c2q3tdllqum5k" path="res://graficos/rectangulonegro.png" id="3_xx5ko"]
 [ext_resource type="Texture2D" uid="uid://d1nq5jn1i6j5" path="res://graficos/TITULO VERTICAL.png" id="4_apflf"]
+
+[sub_resource type="Animation" id="Animation_sklpv"]
+resource_name = "movimiento"
+length = 2.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_nb4jr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_f562y"]
+_data = {
+"RESET": SubResource("Animation_nb4jr"),
+"movimiento": SubResource("Animation_sklpv")
+}
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -14,13 +52,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_t2bna")
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-layout_mode = 0
-offset_right = 1152.0
-offset_bottom = 656.0
-stream = ExtResource("2_13sgp")
-autoplay = true
-loop = true
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("2_4kh0x")
+offset = Vector2(578, 324)
+vframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D2"]
+libraries = {
+"": SubResource("AnimationLibrary_f562y")
+}
 
 [node name="Jugar" type="Button" parent="."]
 layout_mode = 0

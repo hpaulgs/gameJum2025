@@ -6,6 +6,7 @@ func _ready() -> void:
 	$Atras.visible = false
 	$TextoControles.visible = false
 	$Sprite2D.visible = false
+	$Sprite2D2/AnimationPlayer.play("movimiento")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
