@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4nff5r2ipp3t"]
+[gd_scene load_steps=4 format=3 uid="uid://b4nff5r2ipp3t"]
 
 [ext_resource type="Script" path="res://scripts/derrota.gd" id="1_w7wwb"]
+[ext_resource type="Texture2D" uid="uid://c2q3tdllqum5k" path="res://graficos/rectangulonegro.png" id="2_31g6t"]
 [ext_resource type="AudioStream" uid="uid://dn6dg2mqtfxyf" path="res://musica/failure-2.wav" id="2_eib0l"]
 
 [node name="Derrota" type="Control"]
@@ -21,11 +22,17 @@ offset_bottom = 158.0
 theme_override_font_sizes/font_size = 80
 text = "Derrota..."
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.509804)
+position = Vector2(928, 332)
+scale = Vector2(0.426667, 0.493333)
+texture = ExtResource("2_31g6t")
+
 [node name="Creditos" type="Label" parent="."]
 layout_mode = 0
-offset_left = 128.0
+offset_left = 808.0
 offset_top = 192.0
-offset_right = 366.0
+offset_right = 1046.0
 offset_bottom = 468.0
 theme_override_font_sizes/font_size = 20
 text = "Programadores
@@ -62,12 +69,18 @@ stream = ExtResource("2_eib0l")
 volume_db = 10.0
 autoplay = true
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.509804)
+position = Vector2(368, 336)
+scale = Vector2(1.01333, 0.346667)
+texture = ExtResource("2_31g6t")
+
 [node name="Sonido" type="Label" parent="."]
 layout_mode = 0
-offset_left = 504.0
-offset_top = 232.0
-offset_right = 1083.0
-offset_bottom = 411.0
+offset_left = 80.0
+offset_top = 248.0
+offset_right = 659.0
+offset_bottom = 427.0
 text = "Sonido
 
 Pop Sound by qubodup --License: Creative Commons 0

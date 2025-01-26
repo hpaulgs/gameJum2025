@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://besi4c4i8k627"]
+[gd_scene load_steps=5 format=3 uid="uid://besi4c4i8k627"]
 
 [ext_resource type="Script" path="res://scripts/victoria.gd" id="1_gwuqu"]
 [ext_resource type="AudioStream" uid="uid://cxsa237ko360p" path="res://musica/music-orchestral-victory-fanfare.wav" id="2_tf4dj"]
+[ext_resource type="VideoStream" path="res://graficos/PANTALLA-INICIO.ogv" id="3_7se1b"]
+[ext_resource type="Texture2D" uid="uid://c2q3tdllqum5k" path="res://graficos/rectangulonegro.png" id="3_u7bsa"]
 
 [node name="Victoria" type="Control"]
 layout_mode = 3
@@ -12,6 +14,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gwuqu")
 
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 656.0
+stream = ExtResource("3_7se1b")
+autoplay = true
+loop = true
+
 [node name="Victoria" type="Label" parent="."]
 layout_mode = 0
 offset_left = 408.0
@@ -21,11 +31,17 @@ offset_bottom = 158.0
 theme_override_font_sizes/font_size = 80
 text = "¡Victoria!"
 
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.509804)
+position = Vector2(928, 332)
+scale = Vector2(0.426667, 0.493333)
+texture = ExtResource("3_u7bsa")
+
 [node name="Creditos" type="Label" parent="."]
 layout_mode = 0
-offset_left = 128.0
+offset_left = 808.0
 offset_top = 192.0
-offset_right = 366.0
+offset_right = 1046.0
 offset_bottom = 468.0
 theme_override_font_sizes/font_size = 20
 text = "Programadores
@@ -61,12 +77,18 @@ text = "Volver a jugar"
 stream = ExtResource("2_tf4dj")
 autoplay = true
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.509804)
+position = Vector2(368, 336)
+scale = Vector2(1.01333, 0.346667)
+texture = ExtResource("3_u7bsa")
+
 [node name="Sonido" type="Label" parent="."]
 layout_mode = 0
-offset_left = 504.0
-offset_top = 232.0
-offset_right = 1084.0
-offset_bottom = 411.0
+offset_left = 80.0
+offset_top = 248.0
+offset_right = 660.0
+offset_bottom = 427.0
 text = "Sonido
 
 Pop Sound by qubodup --License: Creative Commons 0
